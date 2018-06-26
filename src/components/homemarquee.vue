@@ -11,7 +11,7 @@
                     </li>
                 </ul> -->
                 <ul class="marquee_list"  :class="{ marquee_top: animate }">
-                    <li v-for=" item in marqueeList ">
+                    <li v-for="(item, index) in marqueeList " v-bind:key="index">
                         <span>{{ item.name }}</span>
                     </li>
                 </ul>
