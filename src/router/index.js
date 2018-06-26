@@ -9,31 +9,30 @@ import Search from '@/pages/search/search' // 搜索
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/list',
-      name: 'list',
-      component: List
-    },
-    {
-      path: '/detail',
-      name: 'detail',
-      component: Detail
-    },
-    {
-      path: '/search',
-      name: 'search',
-      component: Search
-    }
-  ]
+    routes: [{
+            path: '/',
+            name: '首页',
+            component: Home
+        },
+        {
+            path: '/',
+            name: '欢迎',
+            component: HelloWorld
+        },
+        {
+            path: '/list',
+            name: '列表',
+            component: List
+        },
+        {
+            path: '/detail',
+            name: '详情',
+            component: Detail
+        },
+        {
+            path: '/search',
+            name: '搜索',
+            component: Search
+        }
+    ]
 })

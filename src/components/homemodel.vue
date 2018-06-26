@@ -13,29 +13,35 @@
 import { NotificationCenter } from 'node-notifier'
 
 export default{
-  props: {
-    modelList: Array
-  },
-  data: function () {
-    return {
-      modelList: []
+    name:'homemodel',
+    props:{
+        modelList:Array
+    },
+    data () {
+        return {
+
+        }
     }
-  }
 }
 </script>
 
 <style lang='stylus' scoped>
 .modelbox
-    width 90%
+    width 94%
     margin 0 auto
     .modelul
         list-style none
         .model_li
             list-style none
-            margin-left -40px
-            border-radius 20px
-            margin-bottom 20px
+            // margin-left -40px
+            border-radius 8px
+            margin-bottom 15px
             background-repeat no-repeat
             background-size cover
             background-position center center
+            overflow hidden
+            p
+                line-height 70px
+                background rgba(0,0,0,.4)
+                color #ffffff
 </style>
