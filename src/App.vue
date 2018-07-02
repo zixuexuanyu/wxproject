@@ -3,7 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <!-- <router-view/> -->
     
-        <div class="navbar" v-if="showNav">
+        <div class="navbar">
             <div class="navbar-item">
                 <router-link to="/home" >首页</router-link>
             </div>
@@ -26,20 +26,20 @@ export default {
   name: 'App',
   data(){
       return {
-          showNav: true
+        //   showNav: true
       }
   },
   mounted(){
     console.log(this.showNav)
   },
-  beforeUpdate(){
+//   beforeUpdate(){
       
-      if(hashsrc == '#/home'||hashsrc == '#/list'||hashsrc == '#/my'||hashsrc == '#/'){
-          this.showNav=true
-      }else{
-          this.showNav=false
-      }
-  }
+//       if(hashsrc == '#/home'||hashsrc == '#/list'||hashsrc == '#/my'||hashsrc == '#/'){
+//           this.showNav=true
+//       }else{
+//           this.showNav=false
+//       }
+//   }
 }
 </script>
 
