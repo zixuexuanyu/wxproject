@@ -3,7 +3,7 @@
     <div class="modelbox">
         <ul class="modelul">
             <li class="model_li" v-for="(item, index) in modelList" v-bind:key="index" :style=" { backgroundImage : 'url('+ item.imgUrl +')' }">
-                <p>{{ item.title }}</p>
+                <router-link to="detail" v-on:click="sendMsgToParent">{{ item.title }}</router-link>
             </li>
         </ul>
     </div>
@@ -20,6 +20,12 @@ export default{
     data () {
         return {
 
+        }
+    },
+    methods:{
+        //子组件给父组件传递参数
+        sendMsgToParent(){
+            this.$emit("hideNav",true)
         }
     }
 }
@@ -40,8 +46,9 @@ export default{
             background-size cover
             background-position center center
             overflow hidden
-            p
+            a
                 line-height 70px
                 background rgba(0,0,0,.4)
+                display block
                 color #ffffff
 </style>

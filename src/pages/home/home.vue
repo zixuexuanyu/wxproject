@@ -9,7 +9,7 @@ import axios from 'axios';
     <!-- 小喇叭公告 -->
     <home-marquee :marqueeList="marqueeList"></home-marquee>
     <!-- 模块 -->
-    <home-model :modelList="modelList"></home-model>
+    <home-model :modelList="modelList" v-on:hideNav="showMsgFromChild"></home-model>
   </div>
 </template>
 
@@ -48,10 +48,14 @@ export default {
       this.swiperList=data.swiperList
       this.marqueeList=data.marqueeList
       this.modelList=data.modelList
+    },
+    //接收子组件给父组件传的参数
+    showMsgFromChild(res){
+      console.log(res)
     }
   },
   mounted(){
-    this.gethomeinfo()
+    this.gethomeinfo();
   }
 }
 </script>
