@@ -19,7 +19,7 @@ export default {
 <style lang="stylus" scoped>
 #app
   .navbar
-    display none!important
+    display none
 .de_top
   height 50px
   line-height 50px

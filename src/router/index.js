@@ -20,37 +20,65 @@ export default new Router({
         {
             path: '/',
             name: '首页',
-            component: Home
+            component: Home,
+            meta: {
+                navShow: true,
+                cname: '一级页面'
+            }
         },
         {
             path: '/home',
             name: '首页',
-            component: Home
+            component: Home,
+            meta: {
+                navShow: true,
+                cname: '一级页面'
+            }
         },
         {
             path: '/HelloWorld',
             name: '欢迎',
-            component: HelloWorld
+            component: HelloWorld,
+            meta: {
+                navShow: true,
+                cname: '一级页面'
+            }
         },
         {
             path: '/list',
             name: '列表',
-            component: List
+            component: List,
+            meta: {
+                navShow: true,
+                cname: '一级页面'
+            }
         },
         {
             path: '/detail',
             name: '详情',
-            component: Detail
+            component: Detail,
+            meta: {
+                navShow: false,
+                cname: '二级页面'
+            }
         },
         {
             path: '/search',
             name: '搜索',
-            component: Search
+            component: Search,
+            meta: {
+                navShow: false,
+                cname: '二级页面'
+            }
         },
         {
             path: '/my',
             name: '我的',
-            component: My
+            component: My,
+            meta: {
+                navShow: true,
+                cname: '一级页面'
+            }
         }
     ]
 })
