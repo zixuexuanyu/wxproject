@@ -55,12 +55,14 @@ export default {
 }
 .navbar-item{
     display: inline-block;
+    width: 100%;
 }
 .navbar-item a{
     display: inline-block;
     height: 50px;
     font-size: 12px;
     color: #333;
+    width: 100%;
 }
 .navbar-item a i{
     display: block;

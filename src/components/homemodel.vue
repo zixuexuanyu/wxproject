@@ -3,7 +3,7 @@
     <div class="modelbox">
         <ul class="modelul">
             <li class="model_li" v-for="(item, index) in modelList" v-bind:key="index" :style=" { backgroundImage : 'url('+ item.imgUrl +')' }">
-                <router-link to="detail" v-on:click="sendMsgToParent">{{ item.title }}</router-link>
+                <router-link to="detail">{{ item.title }}</router-link>
             </li>
         </ul>
     </div>
@@ -20,12 +20,6 @@ export default{
     data () {
         return {
 
-        }
-    },
-    methods:{
-        //子组件给父组件传递参数
-        sendMsgToParent(){
-            this.$emit("hideNav",true)
         }
     }
 }
