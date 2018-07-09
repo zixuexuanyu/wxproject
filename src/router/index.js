@@ -67,8 +67,8 @@ export default new Router({
             name: '搜索',
             component: Search,
             meta: {
-                navShow: false,
-                cname: '二级页面'
+                navShow: true,
+                cname: '一级页面'
             }
         },
         {
