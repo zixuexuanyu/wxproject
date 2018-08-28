@@ -29,8 +29,10 @@ export default{
 .modelbox
     width 94%
     margin 0 auto
+    padding-bottom 60px
     .modelul
         list-style none
+        margin-top 15px
         .model_li
             list-style none
             // margin-left -40px
@@ -41,8 +43,9 @@ export default{
             background-position center center
             overflow hidden
             a
-                line-height 70px
-                background rgba(0,0,0,.4)
+                line-height 100px
+                background rgba(255,255,255,.4)
                 display block
-                color #ffffff
+                color #333333
+                font-size 20px
 </style>

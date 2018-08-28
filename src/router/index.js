@@ -1,29 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld' // hello页面
-import Home from '@/pages/home/home' // 首页
-import Index from '@/pages/index/index' // 主页
-import List from '@/pages/list/list' // 列表
-import Detail from '@/pages/detail/detail' // 详情
-import Search from '@/pages/search/search' // 搜索
-import My from '@/pages/my/my' // 我的
+import Home from '@/pages/home' // 首页
+import List from '@/pages/list' // 列表
+import Detail from '@/pages/detail' // 详情
+import Search from '@/pages/search' // 搜索
+import My from '@/pages/my' // 我的
+import Course from '@/pages/course' // 教程
+import Show from '@/pages/show' // 展示
+import New from '@/pages/new' // 新手
 
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        // {
-        //     path: '/',
-        //     name: '主页',
-        //     component: Index
-        // },
-        {
+    // mode: 'history',
+    routes: [{
             path: '/',
             name: '首页',
             component: Home,
+            redirect: '/home',
             meta: {
                 navShow: true,
-                cname: '一级页面'
+                cname: '一级页面',
+                names: '首页'
             }
         },
         {
@@ -32,16 +30,38 @@ export default new Router({
             component: Home,
             meta: {
                 navShow: true,
-                cname: '一级页面'
+                cname: '一级页面',
+                names: '首页'
             }
         },
         {
-            path: '/HelloWorld',
-            name: '欢迎',
-            component: HelloWorld,
+            path: '/course',
+            name: '教程',
+            component: Course,
             meta: {
                 navShow: true,
-                cname: '一级页面'
+                cname: '一级页面',
+                names: '教程分类'
+            }
+        },
+        {
+            path: '/show',
+            name: '展示',
+            component: Show,
+            meta: {
+                navShow: true,
+                cname: '一级页面',
+                names: '成品展示'
+            }
+        },
+        {
+            path: '/new',
+            name: '新手',
+            component: New,
+            meta: {
+                navShow: true,
+                cname: '一级页面',
+                names: '新手引导'
             }
         },
         {
@@ -49,8 +69,9 @@ export default new Router({
             name: '列表',
             component: List,
             meta: {
-                navShow: true,
-                cname: '一级页面'
+                navShow: false,
+                cname: '二级页面',
+                names: '列表'
             }
         },
         {
@@ -59,7 +80,8 @@ export default new Router({
             component: Detail,
             meta: {
                 navShow: false,
-                cname: '二级页面'
+                cname: '二级页面',
+                names: '详情'
             }
         },
         {
@@ -67,8 +89,9 @@ export default new Router({
             name: '搜索',
             component: Search,
             meta: {
-                navShow: true,
-                cname: '一级页面'
+                navShow: false,
+                cname: '二级页面',
+                names: '搜索'
             }
         },
         {
@@ -77,7 +100,8 @@ export default new Router({
             component: My,
             meta: {
                 navShow: true,
-                cname: '一级页面'
+                cname: '一级页面',
+                names: '我的'
             }
         }
     ]

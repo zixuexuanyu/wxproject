@@ -1,20 +1,30 @@
 <template>
     <div id="app">
-        <!--<img src="./assets/logo.png">-->
-        <!-- <router-view/> -->
+		<!-- <div class="navtop">
+			<div class="nt_gobakck" @click="goback()"><i class="icon iconfont icon-fanhui" v-if="$route.meta.showback"></i></div>
+			<div class="nt_content">{{ $route.meta.names }}</div>
+			<div class="nt_right">
+				<a href="http://www.iconfont.cn"><i class="icon iconfont icon-cart1" v-if="$route.meta.showshop"></i></a>
+				<a href="http://www.baidu.com"><i class="icon iconfont icon-shezhi" v-if="$route.meta.showsetting"></i></a>
+			</div>
+		</div> -->
         
         <div class="navbar" v-if="$route.meta.navShow">
+            <!-- （首页——搜索-轮播图-菜单[教程、展示]-模块） -->
             <div class="navbar-item">
                 <router-link to="/home" ><i class="icon iconfont icon-shouyeshouye"></i>首页</router-link>
             </div>
+            <!-- （新手引导） -->
             <div class="navbar-item">
-                <router-link to="/list"><i class="icon iconfont icon-DIYshougongfang"></i>分类</router-link>
+                <router-link to="/new"><i class="icon iconfont icon-xinshourenwu"></i>新手引导</router-link>
             </div>
+            <!-- （教程分类——毛线-纸张-其他） -->
             <div class="navbar-item">
-                <router-link to="/search"><i class="icon iconfont icon-sousuo"></i>搜索</router-link>
+                <router-link to="/course"><i class="icon iconfont icon-DIYshougongfang"></i>教程分类</router-link>
             </div>
+            <!-- （成品展示——） -->
             <div class="navbar-item">
-                <router-link to="/my"><i class="icon iconfont icon-wode"></i>我的</router-link>
+                <router-link to="/show"><i class="icon iconfont icon-chanpin"></i>成品展示</router-link>
             </div>
         </div>
         <keep-alive class="view">
@@ -30,7 +40,12 @@ export default {
     data(){
         return {
         }
-    }
+    },
+	methods:{
+		goback(){
+			this.$router.go(-1);
+		}
+	}
 }
 </script>
 
@@ -42,6 +57,39 @@ export default {
     text-align: center;
     color: #2c3e50;
 }
+
+.navtop{
+	width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #2c3e50;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;z-index: 9999;
+}
+.nt_content{
+	font-size: 16px;
+}
+.nt_gobakck{
+	display: inline-block;
+    position: absolute;
+	left: 0px;
+	top: 0;
+}
+.nt_right{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0;
+}
+.nt_right i,.nt_gobakck i{
+	padding: 10px 15px;
+	font-size: 24px;
+	color: #fff;
+}
+
+
 .navbar{
     width: 100%;
     height: 50px;
@@ -52,6 +100,7 @@ export default {
     display: flex;
     justify-content: space-around;
     border-top: #eee solid 1px;
+    background-color: #fff;
 }
 .navbar-item{
     display: inline-block;
