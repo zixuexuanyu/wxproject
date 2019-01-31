@@ -19,18 +19,8 @@ export default new Router({
     routes: [{
             path: '/',
             name: '首页',
-            component: Index,
-            redirect: '/Index'
-        },
-        {
-            path: '/pullrefash',
-            name: '下拉刷新',
-            component: pullrefash
-        },
-        {
-            path: '/index2',
-            name: '例子',
-            component: index2
+            component: home,
+            redirect: '/home'
         },
         {
             path: '/home',

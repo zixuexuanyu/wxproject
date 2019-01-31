@@ -78,6 +78,6 @@ fastclick.attach(document.body)
 new Vue({
     el: '#app',
     router,
-    components: { Indexs },
-    template: '<Indexs/>'
+    components: { App },
+    template: '<App/>'
 })
