@@ -43,7 +43,7 @@ export default {
   },
   methods:{
     gethomeinfo(){
-      axios.get('../../static/record/home.json').then(this.gethomeinfosucc)
+      axios.get('../../../static/record/home.json').then(this.gethomeinfosucc)
     },
     gethomeinfosucc(res){
       console.log(res);

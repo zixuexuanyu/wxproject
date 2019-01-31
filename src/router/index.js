@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/index' //首页
+import Index1 from '@/pages/index' //首页
 import pullrefash from '@/pages/pullrefash'
 import index2 from '@/pages/example/index' //示例首页框架
 import home from '@/pages/example/home' // 示例首页
@@ -19,8 +19,20 @@ export default new Router({
     routes: [{
             path: '/',
             name: '首页',
-            component: home,
-            redirect: '/home'
+            component: Index1,
+            meta: {
+                navShow: true
+            }
+        },
+        {
+            path: '/index2',
+            name: '示例首页2',
+            component: index2,
+            meta: {
+                navShow: true,
+                cname: '一级页面',
+                names: '示例首页'
+            }
         },
         {
             path: '/home',

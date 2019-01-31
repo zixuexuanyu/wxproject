@@ -9,27 +9,22 @@
 			</div>
 		</div> -->
         
-        <div class="navbar" v-if="$route.meta.navShow">
-            <!-- （首页——搜索-轮播图-菜单[教程、展示]-模块） -->
+        <!-- <div class="navbar" v-if="$route.meta.navShow">
             <div class="navbar-item">
                 <router-link to="/home" ><i class="icon iconfont icon-shouyeshouye"></i>首页</router-link>
             </div>
-            <!-- （新手引导） -->
             <div class="navbar-item">
                 <router-link to="/new"><i class="icon iconfont icon-xinshourenwu"></i>新手引导</router-link>
             </div>
-            <!-- （教程分类——毛线-纸张-其他） -->
             <div class="navbar-item">
                 <router-link to="/course"><i class="icon iconfont icon-DIYshougongfang"></i>教程分类</router-link>
             </div>
-            <!-- （成品展示——） -->
             <div class="navbar-item">
                 <router-link to="/show"><i class="icon iconfont icon-chanpin"></i>成品展示</router-link>
             </div>
-        </div>
-        <keep-alive class="view">
-            <router-view></router-view>
-        </keep-alive>
+        </div> -->
+        <!-- <div><router-link to="index2">首页</router-link></div> -->
+        <router-view></router-view>
     </div>
 </template>
 
