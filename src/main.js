@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import ExmpleIndex from '@/pages/example/index'
+import Indexs from '@/pages/index'
 import router from './router'
 import fastclick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -76,6 +78,6 @@ fastclick.attach(document.body)
 new Vue({
     el: '#app',
     router,
-    components: { App },
-    template: '<App/>'
+    components: { Indexs },
+    template: '<Indexs/>'
 })

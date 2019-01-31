@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import HomeSwiper from '@/components/homeswiper'
-// import HomeSwipers from '@/components/homeswipers'
-import HomeMarquee from '@/components/homemarquee'
-import HomeNav from '@/components/homenav'
-import HomeModel from '@/components/homemodel'
+import HomeSwiper from '@/components/example/homeswiper'
+// import HomeSwipers from '@/components/example/homeswipers'
+import HomeMarquee from '@/components/example/homemarquee'
+import HomeNav from '@/components/example/homenav'
+import HomeModel from '@/components/example/homemodel'
 
 import axios from 'axios'
 
